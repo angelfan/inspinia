@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: inspinia_development
+  pool: 5
+  username: inspinia
+  password:
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: utf8
+  database: inspinia_test
+  pool: 5
+  username: inspinia
+  password:
+  host: localhost

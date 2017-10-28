@@ -13,3 +13,27 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+//= require jquery/jquery-3.1.1.min.js
+//= require jquery_ujs
+//= require bootstrap-sprockets
+//= require turbolinks
+//= require metisMenu/jquery.metisMenu.js
+//= require pace/pace.min.js
+//= require peity/jquery.peity.min.js
+//= require slimscroll/jquery.slimscroll.min.js
+
+// plugins
+//= require sweetalert2.min
+//= require tinycon/tinycon.min
+
+// infrastructures
+//= require sweet-alert2-rails
+//= require wice_grid
+//= require js-routes
+//= require cable
+
+// customer style
+//= require ./os/helpers/page
+//= require ./os/helpers/swal_confirm
+//= require_tree ./crm
