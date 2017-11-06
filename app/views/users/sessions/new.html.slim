@@ -1,0 +1,13 @@
+.middle-box.text-center
+  .col-lg-12
+    .ibox
+      .ibox-title
+        h3 AngelFan
+      .ibox-content
+        =form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'm-t', role: 'form'} ) do |f|
+          .form-group
+            =f.email_field :email, autofocus: true, class: 'form-control'
+          .form-group
+            =f.password_field :password, autocomplete: "off", class: 'form-control'
+          = f.submit '登录', class: 'btn btn-primary block full-width m-b'
+

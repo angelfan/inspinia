@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    meta content="text/html; charset=UTF-8" http-equiv="Content-Type"
+    meta charset="utf-8"
+    meta content="width=device-width, initial-scale=1.0" name="viewport"
+    meta content="IE=edge" http-equiv="X-UA-Compatible"
+    meta content='no-cache' name='turbolinks-cache-control'
+    title AngelFan
+    = csrf_meta_tags
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': true
+    = javascript_include_tag 'application', 'data-turbolinks-track': true
+  body class="#{controller_name} #{action_name}"
+    = Gon::Base.render_data
+    #wrapper[class="#{params[:controller]} #{params[:action]}"]
+      = render 'layouts/navigation'
+      #page-wrapper[class="gray-bg #{@extra_class}"]
+        = render 'layouts/topnavbar'
+        .row.wrapper.border-bottom.white-bg.page-heading
+          .col-lg-10
+            h2= breadcrumbs.last&.text
+            == breadcrumbs autoroot: false, style: :bootstrap
+        .wrapper.wrapper-content
+          = yield
+        = render 'layouts/footer'
+    = yield :javascript

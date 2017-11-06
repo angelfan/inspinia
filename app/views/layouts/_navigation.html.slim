@@ -1,0 +1,21 @@
+nav.navbar-default.navbar-static-side#navagation[role="navigation"]
+  .sidebar-collapse
+    ul#side-menu.nav.metismenu
+      li.nav-header#nav-header
+        .dropdown.profile-element
+          span#avatar[data-turbolinks-permanent='true']
+            =image_tag('https://avatars0.githubusercontent.com/u/6702172?s=40&v=4', class: 'img-circle', alt: 'angelfan', id: 'avatar')
+          a.dropdown-toggle[data-toggle="dropdown" href="#"]
+            span.clear
+              span.block.m-t-xs
+                strong.font-bold= current_user.email
+              span.text-muted.text-xs.block.m-t-xs
+                i.fa.fa-circle.fa_online_class
+                = 'H'
+                b.caret
+        .logo-element = current_user.email.last
+          ul.dropdown-menu.m-t-xs
+      li[class=is_active_controller('angel_passes')]
+        a[href=angel_passes_path]
+          i.fa.fa-info-circle
+          span.nav-label AngelPass

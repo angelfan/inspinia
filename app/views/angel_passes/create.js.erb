@@ -1,0 +1,4 @@
+$('#angel_passes_table tbody').prepend('<%= j render partial: 'table', locals: { angel_pass: @angel_pass } %>')
+FlashNotice.render(<%= raw @result.to_json %> )
+
+

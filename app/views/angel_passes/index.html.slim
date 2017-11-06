@@ -1,0 +1,42 @@
+- breadcrumb :angel_passes
+
+.row
+  .col-lg-8
+    = render_ibox box_title: '新增' do
+      = simple_form_for AngelPass.new, remote: true do |f|
+        = f.input :site
+        = f.input :title
+        = f.input :account, as: :string
+        = f.input :password, as: :string
+        = f.button :submit
+
+    = render_ibox box_title: 'AngelPass' do
+      #angel_passes_table.table-responsive
+        table.table.table-striped.table-hover
+          thead
+            tr
+              th = AngelPass.human_attribute_name(:site)
+              th = AngelPass.human_attribute_name(:title)
+              th = AngelPass.human_attribute_name(:account)
+              th = AngelPass.human_attribute_name(:password)
+              th = '操作'
+          tbody
+            - @angel_passes.each do |angel_pass|
+              tr id="angel_pass_#{angel_pass.id}"
+                td = angel_pass.site
+                td = angel_pass.title
+                td = angel_pass.account
+                td = angel_pass.password
+                td
+                  = link_to '详细', angel_pass_path(angel_pass)
+                  = link_to '删除', angel_pass_path(angel_pass), method: :delete, remote: true
+
+  .col-lg-4
+    = render_ibox box_title: '筛选' do
+      = search_form_for @q, builder: SimpleForm::FormBuilder, defaults: { required: false } do |f|
+        = f.input :site_eq
+        = f.input :title_eq
+        .hr-line-dashed
+        .form-group.p-xs
+          .pull-right
+            = f.button :submit, '搜索'

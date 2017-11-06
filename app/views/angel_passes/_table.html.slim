@@ -1,0 +1,8 @@
+tr
+  td = angel_pass.site
+  td = angel_pass.title
+  td = angel_pass.account
+  td = angel_pass.password
+  td
+    = link_to '详细', angel_pass_path(angel_pass)
+    = link_to '删除', angel_pass_path(angel_pass), method: :delete, remote: true

@@ -1,0 +1,43 @@
+zh-CN:
+  attributes:
+    id: ID
+    created_at: 创建时间
+    updated_at: 更新时间
+    deleted_at: 删除时间
+    user_id: 用户
+    title: 名称
+  activerecord:
+    models:
+      user:
+        one: 用户
+        other: 用户
+      angel_pass:
+        one: AngelPass
+        other: AngelPass
+    attributes:
+      user:
+        name: 昵称
+        name_cont: 昵称
+        email: 邮箱
+        admin: 管理员
+        password: 密码
+        password_confirmation: 密码确认
+        remember_me: 保持登入
+        avatar: 头像
+        mobile: 手机
+        real_name: 真实姓名
+        id_number: 身份证号
+        confirmed: 是否验证
+        role: 管理身份
+        rule_ids: 管理权限
+        department_ids: 所属部门
+        last_sign_in_ip: 最后一次登录IP
+        last_sign_in_at: 最后一次登录时间
+        reported_users_count: 被检举次数
+        blocked: 是否封锁
+        created_at: 注册时间
+      angel_pass:
+        title: 标题
+        site: 网站
+        account: 账户
+        password: 密码

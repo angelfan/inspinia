@@ -1,0 +1,12 @@
+.ibox
+  - if box_title
+    .ibox-title class = box_title
+      h5
+        = box_title
+        - if box_desc
+          small = box_desc
+      .ibox-tools
+        a.collapse-link
+          i.fa.fa-chevron-up
+  .ibox-content
+    = content
